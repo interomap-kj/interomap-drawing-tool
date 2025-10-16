@@ -1,0 +1,36 @@
+{
+    "en": {
+        "sentences": {
+            "Please choose a persona": "Please choose a persona",
+            "Please select the levels of pleasantness and intensity": "Please select the levels of pleasantness and intensity",
+            "You may now draw": "You may now draw"
+        },
+        "words": {
+            "Female": "Female",
+            "Intensity": "Intensity",
+            "Male": "Male",
+            "Pleasant": "Pleasant",
+            "Pleasantness": "Pleasantness",
+            "Strong": "Strong",
+            "Unpleasant": "Unpleasant",
+            "Weak": "Weak"
+        }
+    },
+    "fr": {
+        "sentences": {
+            "Please choose a persona": "Veuillez choisir un personnage",
+            "Please select the levels of pleasantness and intensity": "Veuillez choisir un niveau d'agréabilité et un niveau d'intensité",
+            "You may now draw": "Vous pouvez dessiner"
+        },
+        "words": {
+            "Female": "Femme",
+            "Intensity": "Intensité",
+            "Male": "Homme",
+            "Pleasant": "Agréable",
+            "Pleasantness": "Agréabilité",
+            "Strong": "Fort",
+            "Unpleasant": "Désagréable",
+            "Weak": "Faible"
+        }
+    }
+}
