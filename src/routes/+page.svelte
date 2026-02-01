@@ -56,7 +56,7 @@
 
   let langKey = getFromUrl("lang") ?? "en";
   let locale;
-  let persona: 'Female' | 'Male' | undefined = getPersonaFromURL();
+  let persona: 'Child' | 'Male' | undefined = getPersonaFromURL();
   let drawingPersonaFront: DrawingPersona
   let drawingPersonaBack: DrawingPersona
   let selectedBrushSize: number = BrushSizes.MEDIUM
@@ -115,11 +115,11 @@
     return value
   }
 
-  function getPersonaFromURL(): 'Female' | 'Male' | undefined {
+  function getPersonaFromURL(): 'Child' | 'Male' | undefined {
     const personaParam = getFromUrl('persona')
 
-    if (personaParam === 'female') {
-      return 'Female'
+    if (personaParam === 'child') {
+      return 'Child'
     } else if (personaParam === 'male') {
       return 'Male'
     }
@@ -304,7 +304,7 @@
     {#if persona}
       <div class="flex-grow relative">
         <DrawingPersona
-          persona={persona === 'Female' ? 'FemaleFront' : 'MaleFront'}
+          persona={persona === 'Child' ? 'ChildFront' : 'MaleFront'}
           brushSize={selectedBrushSize}
           brushColor={chroma(brushColor).hex()}
           valence={valence}
@@ -316,7 +316,7 @@
       </div>
       <div class="flex-grow relative">
         <DrawingPersona
-          persona={persona === 'Female' ? 'FemaleBack' : 'MaleBack'}
+          persona={persona === 'Child' ? 'ChildBack' : 'MaleBack'}
           brushSize={selectedBrushSize}
           brushColor={chroma(brushColor).hex()}
           valence={valence}
