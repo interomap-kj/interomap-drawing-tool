@@ -56,7 +56,7 @@
 
   let langKey = getFromUrl("lang") ?? "en";
   let locale;
-  let persona: 'Child' | 'Male' | undefined = getPersonaFromURL();
+  let persona: 'Child' | 'Female' | 'Male' | undefined = getPersonaFromURL();
   let drawingPersonaFront: DrawingPersona
   let drawingPersonaBack: DrawingPersona
   let selectedBrushSize: number = BrushSizes.MEDIUM
@@ -115,11 +115,13 @@
     return value
   }
 
-  function getPersonaFromURL(): 'Child' | 'Male' | undefined {
+  function getPersonaFromURL(): 'Child' | 'Female' | 'Male' | undefined {
     const personaParam = getFromUrl('persona')
 
     if (personaParam === 'child') {
       return 'Child'
+    } else if (personaParam === 'female') {
+      return 'Female'
     } else if (personaParam === 'male') {
       return 'Male'
     }
@@ -301,30 +303,39 @@
       </div>
     {/if}
 
-    {#if persona}
-      <div class="flex-grow relative">
-        <DrawingPersona
-          persona={persona === 'Child' ? 'ChildFront' : 'MaleFront'}
-          brushSize={selectedBrushSize}
-          brushColor={chroma(brushColor).hex()}
-          valence={valence}
-          intensity={intensity}
-          on:drawingEnd={onDrawingEnd}
-          on:scaleFactorUpdate={onScaleFactorUpdate}
-          bind:this={drawingPersonaFront}
-        />
-      </div>
-      <div class="flex-grow relative">
-        <DrawingPersona
-          persona={persona === 'Child' ? 'ChildBack' : 'MaleBack'}
-          brushSize={selectedBrushSize}
-          brushColor={chroma(brushColor).hex()}
-          valence={valence}
-          intensity={intensity}
-          on:drawingEnd={onDrawingEnd}
-          bind:this={drawingPersonaBack}
-        />
-      </div>
+{#if persona}
+  <div class="flex-grow relative">
+    <DrawingPersona
+      persona={
+        persona === 'Child' ? 'ChildFront' :
+        persona === 'Female' ? 'FemaleFront' :
+        'MaleFront'
+      }
+      brushSize={selectedBrushSize}
+      brushColor={chroma(brushColor).hex()}
+      valence={valence}
+      intensity={intensity}
+      on:drawingEnd={onDrawingEnd}
+      on:scaleFactorUpdate={onScaleFactorUpdate}
+      bind:this={drawingPersonaFront}
+    />
+  </div>
+
+  <div class="flex-grow relative">
+    <DrawingPersona
+      persona={
+        persona === 'Child' ? 'ChildBack' :
+        persona === 'Female' ? 'FemaleBack' :
+        'MaleBack'
+      }
+      brushSize={selectedBrushSize}
+      brushColor={chroma(brushColor).hex()}
+      valence={valence}
+      intensity={intensity}
+      on:drawingEnd={onDrawingEnd}
+      bind:this={drawingPersonaBack}
+    />
+  </div>
     {:else}
       <div class="flex-grow relative">
         <p>{locale.sentences["Please choose a persona"]}:</p>

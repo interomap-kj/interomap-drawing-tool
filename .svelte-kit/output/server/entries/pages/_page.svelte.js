@@ -459,10 +459,10 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       }
     })}</div>` : ``}
 
-    ${persona ? `<div class="flex-grow relative">${validate_component(DrawingPersona, "DrawingPersona").$$render(
+${persona ? `<div class="flex-grow relative">${validate_component(DrawingPersona, "DrawingPersona").$$render(
       $$result,
       {
-        persona: persona === "Child" ? "ChildFront" : "MaleFront",
+        persona: persona === "Child" ? "ChildFront" : persona === "Female" ? "FemaleFront" : "MaleFront",
         brushSize: selectedBrushSize,
         brushColor: chroma(brushColor).hex(),
         valence,
@@ -477,10 +477,11 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       },
       {}
     )}</div>
-      <div class="flex-grow relative">${validate_component(DrawingPersona, "DrawingPersona").$$render(
+
+  <div class="flex-grow relative">${validate_component(DrawingPersona, "DrawingPersona").$$render(
       $$result,
       {
-        persona: persona === "Child" ? "ChildBack" : "MaleBack",
+        persona: persona === "Child" ? "ChildBack" : persona === "Female" ? "FemaleBack" : "MaleBack",
         brushSize: selectedBrushSize,
         brushColor: chroma(brushColor).hex(),
         valence,
