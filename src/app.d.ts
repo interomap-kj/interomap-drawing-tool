@@ -39,6 +39,8 @@ declare global {
 	}
 
 	enum Persona {
+	  ChildFront,
+	  ChildBack,
 		MaleFront,
 		MaleBack,
 		FemaleFront,
