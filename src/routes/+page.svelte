@@ -336,6 +336,10 @@
           class="py-2 px-4 bg-blue-600 hover:bg-blue-500 rounded shadow text-white"
           on:click={() => (persona = 'Male')}>{locale.words["Male"]}</button
         >
+        <button
+          class="py-2 px-4 bg-blue-600 hover:bg-blue-500 rounded shadow text-white"
+          on:click={() => (persona = 'Child')}>{locale.words["Child"]}</button
+        >
       </div>
     {/if}
 
