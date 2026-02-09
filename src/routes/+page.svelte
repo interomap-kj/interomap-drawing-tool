@@ -338,18 +338,18 @@
   </div>
     {:else}
       <div class="flex-grow relative">
-        <p>{locale.sentences["Please choose a persona"]}:</p>
+        <p>{locale.sentences["Waehle eine Person"]}:</p>
         <button
           class="py-2 px-4 bg-blue-600 hover:bg-blue-500 rounded shadow text-white"
-          on:click={() => (persona = 'Female')}>{locale.words["Female"]}</button
+          on:click={() => (persona = 'Female')}>{locale.words["Weiblich"]}</button
         >
         <button
           class="py-2 px-4 bg-blue-600 hover:bg-blue-500 rounded shadow text-white"
-          on:click={() => (persona = 'Male')}>{locale.words["Male"]}</button
+          on:click={() => (persona = 'Male')}>{locale.words["Maennlich"]}</button
         >
         <button
           class="py-2 px-4 bg-blue-600 hover:bg-blue-500 rounded shadow text-white"
-          on:click={() => (persona = 'Child')}>{locale.words["Child"]}</button
+          on:click={() => (persona = 'Child')}>{locale.words["Kind"]}</button
         >
       </div>
     {/if}
@@ -373,7 +373,7 @@
         <label
           class="absolute top-1/2 -translate-y-1/2 left-full py-1 px-2 bg-neutral-900 rounded-md text-white text-sm font-semibold"
         >
-          {locale.words["Stärke"]}
+          {locale.words["Staerke"]}
         </label>
       </div>
     {/if}

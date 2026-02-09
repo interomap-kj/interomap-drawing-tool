@@ -495,10 +495,10 @@ ${persona ? `<div class="flex-grow relative">${validate_component(DrawingPersona
         }
       },
       {}
-    )}</div>` : `<div class="flex-grow relative"><p>${escape(locale.sentences["Please choose a persona"])}:</p>
-        <button class="py-2 px-4 bg-blue-600 hover:bg-blue-500 rounded shadow text-white">${escape(locale.words["Female"])}</button>
-        <button class="py-2 px-4 bg-blue-600 hover:bg-blue-500 rounded shadow text-white">${escape(locale.words["Male"])}</button>
-        <button class="py-2 px-4 bg-blue-600 hover:bg-blue-500 rounded shadow text-white">${escape(locale.words["Child"])}</button></div>`}
+    )}</div>` : `<div class="flex-grow relative"><p>${escape(locale.sentences["Waehle eine Person"])}:</p>
+        <button class="py-2 px-4 bg-blue-600 hover:bg-blue-500 rounded shadow text-white">${escape(locale.words["Weiblich"])}</button>
+        <button class="py-2 px-4 bg-blue-600 hover:bg-blue-500 rounded shadow text-white">${escape(locale.words["Maennlich"])}</button>
+        <button class="py-2 px-4 bg-blue-600 hover:bg-blue-500 rounded shadow text-white">${escape(locale.words["Kind"])}</button></div>`}
 
     ${persona ? `<div class="relative self-center flex flex-col items-center justify-center h-full mr-32"><label class="text-sm font-semibold">${escape(locale.words["Stark"])}</label>
         <span class="h-4"></span>
@@ -522,7 +522,7 @@ ${persona ? `<div class="flex-grow relative">${validate_component(DrawingPersona
     )}
         <span class="h-4"></span>
         <label class="text-sm font-semibold">${escape(locale.words["Schwach"])}</label>
-        <label class="absolute top-1/2 -translate-y-1/2 left-full py-1 px-2 bg-neutral-900 rounded-md text-white text-sm font-semibold">${escape(locale.words["Stärke"])}</label></div>` : ``}</div>
+        <label class="absolute top-1/2 -translate-y-1/2 left-full py-1 px-2 bg-neutral-900 rounded-md text-white text-sm font-semibold">${escape(locale.words["Staerke"])}</label></div>` : ``}</div>
 
   ${persona ? `<div class="self-center justify-self-center w-auto h-1/4"><div class="flex justify-center py-3"><label class="py-1 px-2 bg-neutral-900 rounded-md text-white text-sm font-semibold">${escape(locale.words["Wie angenehm findest du das?"])}</label></div>
       <div class="flex items-center"><label class="pb-2 text-sm font-semibold">${escape(locale.words["Unangenehm"])}</label>
