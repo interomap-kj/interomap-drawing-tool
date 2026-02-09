@@ -242,10 +242,10 @@
     <p class="mb-4 py-2 px-4 bg-white border shadow rounded-md text-center font-bold">
     {#if valence === undefined || intensity === undefined}
       <span class="text-red-500">
-        {locale.sentences["Please select the levels of pleasantness and intensity"]}.
+        {locale.sentences["Bitte gib an, wie angenehm oder unangenehm und wie stark du das spürst."]}.
       </span>
     {:else}
-      {locale.sentences["You may now draw"]}.
+      {locale.sentences["Du kannst jetzt zeichnen"]}.
     {/if}
     </p>
   {/if}
@@ -358,7 +358,7 @@
       <div
         class="relative self-center flex flex-col items-center justify-center h-full mr-32"
       >
-        <label class="text-sm font-semibold">{locale.words["Strong"]}</label>
+        <label class="text-sm font-semibold">{locale.words["Stark"]}</label>
         <span class="h-4" />
         <Slider
           class="h-96"
@@ -369,11 +369,11 @@
           bind:value={intensity}
         />
         <span class="h-4" />
-        <label class="text-sm font-semibold">{locale.words["Weak"]}</label>
+        <label class="text-sm font-semibold">{locale.words["Schwach"]}</label>
         <label
           class="absolute top-1/2 -translate-y-1/2 left-full py-1 px-2 bg-neutral-900 rounded-md text-white text-sm font-semibold"
         >
-          {locale.words["Intensity"]}
+          {locale.words["Stärke"]}
         </label>
       </div>
     {/if}
@@ -384,11 +384,11 @@
       <div class="flex justify-center py-3">
         <label
           class="py-1 px-2 bg-neutral-900 rounded-md text-white text-sm font-semibold"
-          >{locale.words["Pleasantness"]}</label
+          >{locale.words["Wie angenehm findest du das?"]}</label
         >
       </div>
       <div class="flex items-center">
-        <label class="pb-2 text-sm font-semibold">{locale.words["Unpleasant"]}</label>
+        <label class="pb-2 text-sm font-semibold">{locale.words["Unangenehm"]}</label>
         <span class="w-4" />
         <Slider
           class="w-96 mx-auto"
@@ -398,7 +398,7 @@
           bind:value={valence}
         />
         <span class="w-4" />
-        <label class="pb-2 text-sm font-semibold">{locale.words["Pleasant"]}</label>
+        <label class="pb-2 text-sm font-semibold">{locale.words["Angenehm"]}</label>
       </div>
     </div>
   {/if}
