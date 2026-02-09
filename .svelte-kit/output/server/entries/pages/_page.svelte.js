@@ -431,8 +431,8 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 
 
-<section class="flex flex-col w-full h-full">${persona ? `<p class="mb-4 py-2 px-4 bg-white border shadow rounded-md text-center font-bold">${valence === void 0 || intensity === void 0 ? `<span class="text-red-500">${escape(locale.sentences["Please select the levels of pleasantness and intensity"])}.
-      </span>` : `${escape(locale.sentences["You may now draw"])}.`}</p>` : ``}
+<section class="flex flex-col w-full h-full">${persona ? `<p class="mb-4 py-2 px-4 bg-white border shadow rounded-md text-center font-bold">${valence === void 0 || intensity === void 0 ? `<span class="text-red-500">${escape(locale.sentences["Bitte gib an, wie angenehm oder unangenehm und wie stark du das spürst."])}.
+      </span>` : `${escape(locale.sentences["Du kannst jetzt zeichnen"])}.`}</p>` : ``}
   <div class="relative flex w-full h-3/4">${persona && scaleFactor ? `<div class="self-center flex flex-col ml-32">${validate_component(Toolbar, "Toolbar").$$render($$result, { class: "z-30 w-16" }, {}, {
       default: () => {
         return `${validate_component(ToolbarItem, "ToolbarItem").$$render(
@@ -500,7 +500,7 @@ ${persona ? `<div class="flex-grow relative">${validate_component(DrawingPersona
         <button class="py-2 px-4 bg-blue-600 hover:bg-blue-500 rounded shadow text-white">${escape(locale.words["Male"])}</button>
         <button class="py-2 px-4 bg-blue-600 hover:bg-blue-500 rounded shadow text-white">${escape(locale.words["Child"])}</button></div>`}
 
-    ${persona ? `<div class="relative self-center flex flex-col items-center justify-center h-full mr-32"><label class="text-sm font-semibold">${escape(locale.words["Strong"])}</label>
+    ${persona ? `<div class="relative self-center flex flex-col items-center justify-center h-full mr-32"><label class="text-sm font-semibold">${escape(locale.words["Stark"])}</label>
         <span class="h-4"></span>
         ${validate_component(Slider, "Slider").$$render(
       $$result,
@@ -521,11 +521,11 @@ ${persona ? `<div class="flex-grow relative">${validate_component(DrawingPersona
       {}
     )}
         <span class="h-4"></span>
-        <label class="text-sm font-semibold">${escape(locale.words["Weak"])}</label>
-        <label class="absolute top-1/2 -translate-y-1/2 left-full py-1 px-2 bg-neutral-900 rounded-md text-white text-sm font-semibold">${escape(locale.words["Intensity"])}</label></div>` : ``}</div>
+        <label class="text-sm font-semibold">${escape(locale.words["Schwach"])}</label>
+        <label class="absolute top-1/2 -translate-y-1/2 left-full py-1 px-2 bg-neutral-900 rounded-md text-white text-sm font-semibold">${escape(locale.words["Stärke"])}</label></div>` : ``}</div>
 
-  ${persona ? `<div class="self-center justify-self-center w-auto h-1/4"><div class="flex justify-center py-3"><label class="py-1 px-2 bg-neutral-900 rounded-md text-white text-sm font-semibold">${escape(locale.words["Pleasantness"])}</label></div>
-      <div class="flex items-center"><label class="pb-2 text-sm font-semibold">${escape(locale.words["Unpleasant"])}</label>
+  ${persona ? `<div class="self-center justify-self-center w-auto h-1/4"><div class="flex justify-center py-3"><label class="py-1 px-2 bg-neutral-900 rounded-md text-white text-sm font-semibold">${escape(locale.words["Wie angenehm findest du das?"])}</label></div>
+      <div class="flex items-center"><label class="pb-2 text-sm font-semibold">${escape(locale.words["Unangenehm"])}</label>
         <span class="w-4"></span>
         ${validate_component(Slider, "Slider").$$render(
       $$result,
@@ -545,7 +545,7 @@ ${persona ? `<div class="flex-grow relative">${validate_component(DrawingPersona
       {}
     )}
         <span class="w-4"></span>
-        <label class="pb-2 text-sm font-semibold">${escape(locale.words["Pleasant"])}</label></div></div>` : ``}
+        <label class="pb-2 text-sm font-semibold">${escape(locale.words["Angenehm"])}</label></div></div>` : ``}
 
   <div class="text-right"><a href="" class="text-sm text-slate-400"${add_attribute("this", creditsAnchor, 0)}>Credits</a>
     <div class="hidden"${add_attribute("this", creditsContent, 0)}><p class="text-xs"><b><u>Persona drawings</u></b><br>
